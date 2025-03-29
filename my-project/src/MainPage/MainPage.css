@@ -1,0 +1,133 @@
+.carousel-nav {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.carousel-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.carousel-tab .label {
+  font-weight: bold;
+  color: black;
+}
+
+.carousel-tab .bar {
+  width: 70px;
+  height: 1.5px;
+  background-color: #ccc;
+  margin-top: 5px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-tab .label.active + .bar {
+  background-color: black;
+}
+
+/* 드롭박스 설정정 */
+.dropdown-menu-box {
+  display: none;
+  position: absolute;
+  width: 700px;
+  height: 125px;
+  top: 88.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(234, 233, 233, 0.908);
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 20;
+}
+.dropdown-content {
+  display: flex;
+  gap: 40px;
+}
+.dropdown-content div {
+  text-align: center;
+}
+
+.item-img {
+  width: 0px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.dropdown-menu-box.show {
+  display: block;
+}
+
+/* 드롭박스 내부 표 설정 */
+#innerbox {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;             
+  border-collapse: separate;    
+  width: 100%; 
+  table-layout: fixed;   /* 셀 크기를 고정 비율로 */
+}
+
+/* 표 내부 셀 배경색 */
+#innerbox th,
+#innerbox td {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  text-align: center;
+  vertical-align: middle;          
+}
+
+/* 원하는 경우 헤더는 따로 지정 */
+#innerbox thead th {
+  background-color: rgba(240, 240, 240, 0.9) !important;     
+}
+#innerbox tbody td {
+  background-color: rgba(240, 240, 240, 0.9) !important;
+}
+
+.dropdown-menu-box a {
+  text-decoration-line: none;
+  text-decoration-style: none;
+  color: #2c3e50 !important;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item img {
+  width: 100vw;
+  max-width: 100vw;
+  height: auto;
+}
+
+.carousel-item img {
+  display: block;
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+}
+
+#root,
+#carouselExampleCaptions,
+.carousel,
+.carousel-inner {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+}

@@ -1,0 +1,36 @@
+.dropdown-menu-box.show {
+  display: block;
+  margin-top: 1.1rem
+}
+
+/* 드롭박스 내부 표 설정 */
+#innerbox {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;             
+  border-collapse: separate;    
+  width: 100%;                  
+}
+
+/* 표 내부 셀 배경색 */
+#innerbox th,
+#innerbox td {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  text-align: center;
+}
+
+/* 원하는 경우 헤더는 따로 지정 */
+#innerbox thead th {
+  background-color: rgba(240, 240, 240, 0.9) !important;     
+}
+#innerbox tbody td {
+  background-color: rgba(240, 240, 240, 0.9) !important;
+}
+
+.dropdown-menu-box a {
+  text-decoration-line: none;
+  text-decoration-style: none;
+  color: #2c3e50 !important;
+  font-weight: bold;
+  font-size: 16px;
+}
