@@ -1,36 +1,56 @@
-.dropdown-menu-box.show {
-  display: block;
-  margin-top: 1.1rem
+.carousel-tab {
+  position: relative;
+  z-index: 10000;
 }
 
-/* 드롭박스 내부 표 설정 */
-#innerbox {
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.9);
-  overflow: hidden;             
-  border-collapse: separate;    
-  width: 100%;                  
-}
-
-/* 표 내부 셀 배경색 */
-#innerbox th,
-#innerbox td {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  text-align: center;
-}
-
-/* 원하는 경우 헤더는 따로 지정 */
-#innerbox thead th {
-  background-color: rgba(240, 240, 240, 0.9) !important;     
-}
-#innerbox tbody td {
-  background-color: rgba(240, 240, 240, 0.9) !important;
-}
-
+  /* 드롭박스 내부 글씨 속성 */
 .dropdown-menu-box a {
   text-decoration-line: none;
   text-decoration-style: none;
   color: #2c3e50 !important;
   font-weight: bold;
   font-size: 16px;
+  
+}
+
+#drop-down-bar{
+  position: relative;
+  z-index: 1000;
+}
+/* 드롭박스 설정 */
+.dropdown-menu-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #ddd;
+  padding: 40px 0;
+  border-top: 1px solid #ddd;
+  z-index: 9999; /* 반드시 충분히 높게 설정 */
+  opacity: 40%;
+}
+
+
+
+
+.dropdown-wrapper {
+  position: relative;
+  z-index: 100;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  
+}
+#innerbox{
+  margin-top: 35px;
+  background: #ddd;
+}
+
+/* 셀(td, th) 배경 통일 */
+#innerbox td, #innerbox th {
+  background-color: transparent;            /* 혹은 동일한 어두운 색 */
+  padding: 16px;
+  text-align: center;
+  font-weight: bold;
 }

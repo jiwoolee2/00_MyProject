@@ -63,7 +63,7 @@ const Navbar = ({ activeTab, onTabChange, carouselRef }) => {
       [index].classList.add("active");
 
     document.querySelectorAll(".carousel-tab .bar").forEach((bar) => {
-      bar.style.backgroundColor = "#ccc";
+      bar.style.backgroundColor = "#cccccca0";
     });
     document.querySelectorAll(".carousel-tab .bar")[
       index
@@ -72,43 +72,42 @@ const Navbar = ({ activeTab, onTabChange, carouselRef }) => {
 
   return (
     <>
-      <div className="carousel-nav d-flex justify-content-center gap-4 mt-4">
-        {["new", "women", "men", "kids"].map((key, i) => (
-          <div
-            key={key}
-            className="carousel-tab"
-            data-dropdown-id={`dropdown-${key}`}
-          >
-            <div className={`label ${i === 0 ? "active" : ""}`}>
-              {key.toUpperCase()}
+      <div
+        className="dropdown-wrapper"
+        onMouseLeave={() => onTabChange(null)}
+      >
+        <div id="drop-down-bar" className="carousel-nav d-flex justify-content-center gap-4 mt-4">
+          {["new", "women", "men", "kids"].map((key, i) => (
+            <div
+              key={key}
+              className="carousel-tab"
+              data-dropdown-id={`dropdown-${key}`}
+            >
+              <div className={`label ${i === 0 ? "active" : ""}`}>
+                {key.toUpperCase()}
+              </div>
+              <div className="bar"></div>
             </div>
-            <div className="bar"></div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
       {/* 드롭다운 */}
       {activeTab === "dropdown-new" && (
         <div className="dropdown-menu-box show" id="dropdown-new">
           <div className="dropdown-content">
-            <table className="table table-borderless" id="innerbox">
-              <thead>
-                <tr>
-                  <th>
-                    <NaverText onClick={()=>navi("/new-collection")}>S/S Season Collection</NaverText>
-                  </th>
-                  <th>
-                    <NaverText onClick={()=>navi("/new-outer")}>outer</NaverText>
-                  </th>
-                  <th>
-                    <NaverText onClick={()=>navi("/new-outer")}>Inner</NaverText>
-                  </th>
-                  <th>
-                    <NaverText onClick={()=>navi("/new-pants")}>Pants</NaverText>
-                  </th>
-                </tr>
-              </thead>
-            </table>
+            <table className="table" id="innerbox">
+                <tbody>
+                  <tr>
+                    <td>
+                      <NaverText onClick={() => navi("/new-collection")}>S/S Season Collection</NaverText>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+         
+          
+       
+      
           </div>
         </div>
       )}
@@ -116,25 +115,17 @@ const Navbar = ({ activeTab, onTabChange, carouselRef }) => {
       {activeTab === "dropdown-women" && (
         <div className="dropdown-menu-box show" id="dropdown-women">
           <div className="dropdown-content">
-            <table className="table table-borderless" id="innerbox">
+            <table className="table" id="innerbox">
               <tbody>
                 <tr>
                   <td>
                     <NaverText onClick={()=>("/women-outer")}>Outer</NaverText>
                   </td>
                   <td>
-                    <NaverText onClick={()=>navi("/women-tshirtssweat")}>T-shirts&Sweat</NaverText>
+                    <NaverText onClick={()=>navi("/women-tshirtssweat")}>Sweat</NaverText>
                   </td>
                   <td>
-                    <NaverText onClick={()=>navi("/women-shirtblouse")}>Shirt&Blouse</NaverText>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <NaverText onClick={()=>navi("/women-knitwearcardigan")}>KnitWear&Cardigan</NaverText>
-                  </td>
-                  <td>
-                    <NaverText onClick={()=>navi("/women-innerwear")}>Innerwear</NaverText>
+                    <NaverText onClick={()=>navi("/women-shirtblouse")}>Shirt</NaverText>
                   </td>
                   <td>
                     <NaverText onClick={()=>navi("/women-pants")}>Pants</NaverText>
@@ -149,28 +140,20 @@ const Navbar = ({ activeTab, onTabChange, carouselRef }) => {
       {activeTab === "dropdown-men" && (
         <div className="dropdown-menu-box show" id="dropdown-men">
           <div className="dropdown-content">
-            <table className="table table-borderless" id="innerbox">
+            <table className="table" id="innerbox">
               <tbody>
-                <tr>
+              <tr>
                   <td>
-                    <NaverText onClick={()=>("/men-outer")}>Outer</NaverText>
+                    <NaverText onClick={()=>("/women-outer")}>Outer</NaverText>
                   </td>
                   <td>
-                    <NaverText onClick={()=>navi("/men-tshirtssweat")}>T-shirts&Sweat</NaverText>
+                    <NaverText onClick={()=>navi("/women-tshirtssweat")}>Sweat</NaverText>
                   </td>
                   <td>
-                    <NaverText onClick={()=>navi("/men-shirtblouse")}>Shirt&Blouse</NaverText>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <NaverText onClick={()=>navi("/men-knitwearcardigan")}>KnitWear&Cardigan</NaverText>
+                    <NaverText onClick={()=>navi("/women-shirtblouse")}>Shirt</NaverText>
                   </td>
                   <td>
-                    <NaverText onClick={()=>navi("/men-innerwear")}>Innerwear</NaverText>
-                  </td>
-                  <td>
-                    <NaverText onClick={()=>navi("/men-pants")}>Pants</NaverText>
+                    <NaverText onClick={()=>navi("/women-pants")}>Pants</NaverText>
                   </td>
                 </tr>
               </tbody>
@@ -182,20 +165,20 @@ const Navbar = ({ activeTab, onTabChange, carouselRef }) => {
       {activeTab === "dropdown-kids" && (
         <div className="dropdown-menu-box show" id="dropdown-kids">
           <div className="dropdown-content">
-            <table className="table table-borderless" id="innerbox">
+            <table className="table" id="innerbox">
               <tbody>
-                <tr>
+              <tr>
                   <td>
-                    <NaverText onClick={()=>("/kids-outer")}>Outer</NaverText>
+                    <NaverText onClick={()=>("/women-outer")}>Outer</NaverText>
                   </td>
                   <td>
-                    <NaverText onClick={()=>navi("/kids-tshirtssweat")}>T-shirts&Sweat</NaverText>
+                    <NaverText onClick={()=>navi("/women-tshirtssweat")}>Sweat</NaverText>
                   </td>
                   <td>
-                    <NaverText onClick={()=>navi("/kids-innerwear")}>Innerwear</NaverText>
+                    <NaverText onClick={()=>navi("/women-shirtblouse")}>Shirt</NaverText>
                   </td>
                   <td>
-                    <NaverText onClick={()=>navi("/kids-pants")}>Pants</NaverText>
+                    <NaverText onClick={()=>navi("/women-pants")}>Pants</NaverText>
                   </td>
                 </tr>
               </tbody>
@@ -203,6 +186,7 @@ const Navbar = ({ activeTab, onTabChange, carouselRef }) => {
           </div>
         </div>
       )}
+      </div>
     </>
   );
 };

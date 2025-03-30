@@ -24,16 +24,16 @@ const Header = () => {
             <div className="collapse navbar-collapse menu" id="navbarNav">
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                  <NavbarText className="nav-link" aria-current="page" onClick={()=>navi("/login")}>Login</NavbarText>
+                  <NavbarText className="nav-link" aria-current="page" onClick={()=>navi("/log-in")}>Login</NavbarText>
                 </li>
                 <li className="nav-item">
-                  <NavbarText className="nav-link" onClick={()=>navi("/signup")}>Signup</NavbarText>
+                  <NavbarText className="nav-link" onClick={()=>navi("/sign-up")}>Signup</NavbarText>
                 </li>
                 <li className="nav-item">
-                  <NavbarText className="nav-link" onClick={()=>navi("/logout")}>Logout</NavbarText>
+                  <NavbarText className="nav-link" onClick={()=>navi("/log-out")}>Logout</NavbarText>
                 </li>
                 <li className="nav-item">
-                  <NavbarText className="nav-link" onClick={()=>navi("/mypage")}>Mypage</NavbarText>
+                  <NavbarText className="nav-link" onClick={()=>navi("/my-page")}>Mypage</NavbarText>
                 </li>
               </ul>
             </div>

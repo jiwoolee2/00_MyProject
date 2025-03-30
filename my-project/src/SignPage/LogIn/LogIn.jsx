@@ -4,14 +4,16 @@ import OnlyLogo from "../../Include/Header/OnlyLogo";
 // 제목
 const Title = styled.div`
   text-align: left;
-  font-size: 40px;
+  font-size: 30px;
   max-width: 500px;
-
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 10px; /* 👈 상단 공간 줄이기 */
 `;
 
 // 구분선
 const Line = styled.hr`
-  margin: 20px auto;
+  margin: 10px auto 20px auto; /* 👈 위쪽 마진 줄이기 */
   max-width: 500px;
 `;
 
@@ -20,7 +22,7 @@ const Btn = styled.button`
   margin-left: 0px;
   display: block;
   text-align: left;
-  width: 20%;
+  width: 15.2%;
 `;
 
 // 라벨
@@ -36,26 +38,20 @@ const Wrapper = styled.div`
   width: 100%;
   font-size: 14px;
   margin: 0 auto; /* 가로 가운데 정렬 */
+  position: fixed;
+  top: 50px;
+  left: 60px;
 `;
 
-const SignUp = () => {
+const LogIn = () => {
   return (
     <>
       <OnlyLogo />
 
 
       <Wrapper>
-
-        <Title>회원가입</Title>
+        <Title>로그인</Title>
         <Line />
-
-        {/* 이름 */}
-        <div className="mb-3">
-          <Label className="form-label">
-            이름(First name) <span className="text-primary">※</span>
-          </Label>
-          <input type="text" className="form-control" placeholder="이름을 입력해 주세요." />
-        </div>
 
         {/* 이메일 */}
         <div className="mb-3">
@@ -73,21 +69,13 @@ const SignUp = () => {
           <input type="password" className="form-control pe-5" placeholder="비밀번호를 입력해 주세요." />
         </div>
 
-        {/* 전화번호 */}
-        <div className="mb-4">
-          <Label className="form-label">
-            전화번호 <span className="text-primary">※</span>
-          </Label>
-          <input type="text" className="form-control" placeholder="전화번호를 입력해 주세요." />
-        </div>
-
         {/* 버튼 */}
         <Btn className="btn btn-dark">
-          회원 가입
+          로그인
         </Btn>
       </Wrapper>
     </>
   );
 };
 
-export default SignUp;
+export default LogIn;

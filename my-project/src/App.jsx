@@ -1,13 +1,12 @@
-import { useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import MainPage from './MainPage/MainPage.jsx';
 import { Routes, Route } from "react-router-dom";
 import NewCollection from './Clothes/New/NewCollection/NewCollection.jsx';
-import NewOuter from './Clothes/New/NewOuter/NewOuter.jsx';
-import NewInner from './Clothes/New/NewInner/NewInner.jsx';
-import NewPants from './Clothes/New/NewPants/NewPants.jsx';
+
+import SignUp from './SignPage/SignUp/SignUp.jsx';
+import LogIn from './SignPage/LogIn/LogIn.jsx';
 
 function App() {
  
@@ -20,15 +19,13 @@ function App() {
 
       <Routes>
         <Route path="/" element={<MainPage/>}/>
-        <Route path="/log-in" element={<MainPage/>}/>
-        <Route path="/sign-up" element={<MainPage/>}/>
+        <Route path="/log-in" element={<LogIn/>}/>
+        <Route path="/sign-up" element={<SignUp/>}/>
         <Route path="/log-out" element={<MainPage/>}/>
         <Route path="/my-page" element={<MainPage/>}/>
         
         <Route path="/new-collection"element={<NewCollection/>}/>
-        <Route path="/new-outer"element={<NewOuter/>}/>
-        <Route path="/new-inner"element={<NewInner/>}/>
-        <Route path="/new-pants"element={<NewPants/>}/>
+ 
 
         <Route path="/women-outer"element={<MainPage/>}/>
         <Route path="/women-tshirtssweat"element={<MainPage/>}/>

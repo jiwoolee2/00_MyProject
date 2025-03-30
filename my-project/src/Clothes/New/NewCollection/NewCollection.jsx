@@ -1,38 +1,42 @@
 import Header from "../../../Include/Header/Header";
-import styled from "styled-components";
-
-const Table = styled.div`
-  margin-top: 100px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  padding: 0 200px;  
-`;
-
-const ProductCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 20px;
-`;
-
-const ProductImg = styled.img`
-  width: 200px;
-  height: 270px;
-  object-fit: cover; // 이미지 크기 고정
-  max-width: 100%;
-  padding: 0;
-  margin: 0;
-`;
-
-const ProductInfo = styled.p`
-  padding: 0;
-  margin: 0;
-`
+import {Table,ProductCard,ProductImg,ProductInfo} from "./NewCollection.styles.js";
+import {useState, useEffect} from "react";
+import axios from "axios";
 
 const NewCollection = () => {
+
+
+  useEffect (()=> {
+
+    axios.get(``)
+
+
+
+
+
+
+  },[])
+
+
+
+
+/* 
+ controller를 4개만들어야하나??
+ 상품정보를 가져오는거잖아.,..
+ select할게 2개잖아 -> category랑 type 그럼 이걸 보내면 되곘네 처음에 보낼 때
+ 그러면 하나로 
+
+*/
+
+
+
+
+
+
+
+
+
+
   return (
     <>
       <Header />
@@ -45,46 +49,46 @@ const NewCollection = () => {
             src="https://placehold.co/300x400?text=Model+in+blue+oversized+tee+with+hat"
             alt="Model wearing a blue AIRism oversized crew neck T-shirt with a hat"
           />
-          <ProductInfo className="text-xs mt-1">GENDERLESS, XS–4XL</ProductInfo>
-          <ProductInfo className="text-sm font-medium">AIRism코튼오버사이즈크루넥T(5부)</ProductInfo>
-          <ProductInfo className="text-lg font-bold">19,900원</ProductInfo>
-          <ProductInfo className="text-lg font-bold"/>
+          <ProductInfo className="">GENDERLESS, XS–4XL</ProductInfo>
+          <ProductInfo className="">AIRism코튼오버사이즈크루넥T(5부)</ProductInfo>
+          <ProductInfo className="bold">19,900원</ProductInfo>
+          <ProductInfo className=""/>
         </ProductCard>
 
         {/* Product 2 */}
         <ProductCard>
           <ProductImg
-            src="https://placehold.co/300x400?text=Purple+AIRism+cotton+oversized+crew+neck+T-shirt"
-            alt="Purple AIRism cotton oversized crew neck T-shirt"
+            src="https://placehold.co/300x400?text=Model+in+blue+oversized+tee+with+hat"
+            alt="Model wearing a blue AIRism oversized crew neck T-shirt with a hat"
           />
-          <ProductInfo className="text-xs mt-1">GENDERLESS, XS</ProductInfo>
-          <ProductInfo className="text-sm font-medium">AIRism코튼오버사이즈크루넥T(5부)</ProductInfo>
-          <ProductInfo className="text-lg font-bold text-red-600">12,900원</ProductInfo>
-          <ProductInfo className="text-lg font-bold"/>
+          <ProductInfo className="">GENDERLESS, XS–4XL</ProductInfo>
+          <ProductInfo className="">AIRism코튼오버사이즈크루넥T(5부)</ProductInfo>
+          <ProductInfo className="bold">19,900원</ProductInfo>
+          <ProductInfo className=""/>
         </ProductCard>
 
         {/* Product 3 */}
         <ProductCard>
           <ProductImg
-            src="https://placehold.co/300x400?text=Model+in+light+beige+striped+tee+and+hat"
-            alt="Model wearing a light beige striped AIRism oversized T-shirt with a bucket hat"
+            src="https://placehold.co/300x400?text=Model+in+blue+oversized+tee+with+hat"
+            alt="Model wearing a blue AIRism oversized crew neck T-shirt with a hat"
           />
-          <ProductInfo className="text-xs mt-1">MEN, XS–XXL</ProductInfo>
-          <ProductInfo className="text-sm font-medium">AIRism코튼오버사이즈스트라이프T(반팔)</ProductInfo>
-          <ProductInfo className="text-lg font-bold">19,900원</ProductInfo>
-          <ProductInfo className="text-lg font-bold"/>
+          <ProductInfo className="">GENDERLESS, XS–4XL</ProductInfo>
+          <ProductInfo className="">AIRism코튼오버사이즈크루넥T(5부)</ProductInfo>
+          <ProductInfo className="bold">19,900원</ProductInfo>
+          <ProductInfo className=""/>
         </ProductCard>
 
         {/* Product 4 */}
         <ProductCard>
           <ProductImg
-            src="https://placehold.co/300x400?text=Model+in+muted+plum+crew+neck+tee"
-            alt="Model wearing a muted plum colored crew neck short sleeve T-shirt"
+            src="https://placehold.co/300x400?text=Model+in+blue+oversized+tee+with+hat"
+            alt="Model wearing a blue AIRism oversized crew neck T-shirt with a hat"
           />
-          <ProductInfo className="text-xs mt-1">GENDERLESS, XS–4XL</ProductInfo>
-          <ProductInfo className="text-sm font-medium">크루넥T(반팔)</ProductInfo>
-          <ProductInfo className="text-lg font-bold">14,900원</ProductInfo>
-          <ProductInfo className="text-lg font-bold"/>
+          <ProductInfo className="">GENDERLESS, XS–4XL</ProductInfo>
+          <ProductInfo className="">AIRism코튼오버사이즈크루넥T(5부)</ProductInfo>
+          <ProductInfo className="bold">19,900원</ProductInfo>
+          <ProductInfo className=""/>
         </ProductCard>
         
         
@@ -94,45 +98,46 @@ const NewCollection = () => {
             src="https://placehold.co/300x400?text=Model+in+blue+oversized+tee+with+hat"
             alt="Model wearing a blue AIRism oversized crew neck T-shirt with a hat"
           />
-          <ProductInfo className="text-xs mt-1">GENDERLESS, XS–4XL</ProductInfo>
-          <ProductInfo className="text-sm font-medium">AIRism코튼오버사이즈크루넥T(5부)</ProductInfo>
-          <ProductInfo className="text-lg font-bold">19,900원</ProductInfo>
-          <ProductInfo className="text-lg font-bold"/>
+          <ProductInfo className="">GENDERLESS, XS–4XL</ProductInfo>
+          <ProductInfo className="">AIRism코튼오버사이즈크루넥T(5부)</ProductInfo>
+          <ProductInfo className="bold">19,900원</ProductInfo>
+          <ProductInfo className=""/>
         </ProductCard>
 
         {/* Product 6 */}
         <ProductCard>
           <ProductImg
-            src="/images/men.jpg"
-            alt="Purple AIRism cotton oversized crew neck T-shirt"
+            src="https://placehold.co/300x400?text=Model+in+blue+oversized+tee+with+hat"
+            alt="Model wearing a blue AIRism oversized crew neck T-shirt with a hat"
           />
-          <ProductInfo className="text-xs mt-1">GENDERLESS, XS</ProductInfo>
-          <ProductInfo className="text-sm font-medium">AIRism코튼오버사이즈크루넥T(5부)</ProductInfo>
-          <ProductInfo className="text-lg font-bold text-red-600">12,900원</ProductInfo>
-          <ProductInfo className="text-lg font-bold"/>
-          </ProductCard>
+          <ProductInfo className="">GENDERLESS, XS–4XL</ProductInfo>
+          <ProductInfo className="">AIRism코튼오버사이즈크루넥T(5부)</ProductInfo>
+          <ProductInfo className="bold">19,900원</ProductInfo>
+          <ProductInfo className=""/>
+        </ProductCard>
 
         {/* Product 7 */}
         <ProductCard>
           <ProductImg
-            src="https://placehold.co/300x400?text=Model+in+light+beige+striped+tee+and+hat"
-            alt="Model wearing a light beige striped AIRism oversized T-shirt with a bucket hat"
+            src="https://placehold.co/300x400?text=Model+in+blue+oversized+tee+with+hat"
+            alt="Model wearing a blue AIRism oversized crew neck T-shirt with a hat"
           />
-          <ProductInfo className="text-xs mt-1">MEN, XS–XXL</ProductInfo>
-          <ProductInfo className="text-sm font-medium">AIRism코튼오버사이즈스트라이프T(반팔)</ProductInfo>
-          <ProductInfo className="text-lg font-bold">19,900원</ProductInfo>
-          <ProductInfo className="text-lg font-bold"/>
+          <ProductInfo className="">GENDERLESS, XS–4XL</ProductInfo>
+          <ProductInfo className="">AIRism코튼오버사이즈크루넥T(5부)</ProductInfo>
+          <ProductInfo className="bold">19,900원</ProductInfo>
+          <ProductInfo className=""/>
         </ProductCard>
+
         {/* Product 8 */}
         <ProductCard>
           <ProductImg
-            src="https://placehold.co/300x400?text=Model+in+muted+plum+crew+neck+tee"
-            alt="Model wearing a muted plum colored crew neck short sleeve T-shirt"
+            src="https://placehold.co/300x400?text=Model+in+blue+oversized+tee+with+hat"
+            alt="Model wearing a blue AIRism oversized crew neck T-shirt with a hat"
           />
-          <ProductInfo className="text-xs mt-1">GENDERLESS, XS–4XL</ProductInfo>
-          <ProductInfo className="text-sm font-medium">크루넥T(반팔)</ProductInfo>
-          <ProductInfo className="text-lg font-bold">14,900원</ProductInfo>
-        
+          <ProductInfo className="">GENDERLESS, XS–4XL</ProductInfo>
+          <ProductInfo className="">AIRism코튼오버사이즈크루넥T(5부)</ProductInfo>
+          <ProductInfo className="bold">19,900원</ProductInfo>
+          <ProductInfo className=""/>
         </ProductCard>
       </Table>
     </>

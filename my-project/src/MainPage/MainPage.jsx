@@ -2,7 +2,6 @@ import "./MainPage.css";
 import Header from "../Include/Header/Header";
 import Navbar from "../Include/Navbar/Navbar";
 import { useEffect, useRef, useState } from "react";
-import { Carousel } from 'bootstrap';
 
 const MainPage = () => {
 
@@ -11,10 +10,7 @@ const MainPage = () => {
   const [activeDropdown, setActiveDropdown] = useState("dropdown-new");
 
   useEffect(() => {
-    const carousel = Carousel.getOrCreateInstance(carouselRef.current, {
-      interval: 5000, // 화면 전환 속도 5초초
-      ride: 'carousel'
-    });
+ 
 
     const handleSlide = (e) => {
       updateActiveTab(e.to);
@@ -50,7 +46,6 @@ const MainPage = () => {
       <div
         id="carouselExampleCaptions"
         className="carousel slide"
-        data-bs-ride="carousel"
         ref={carouselRef}
       >
         <div className="carousel-inner">
