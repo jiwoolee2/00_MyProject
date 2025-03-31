@@ -1,6 +1,6 @@
-import Header from "../../../Include/Header/Header";
+import Header from "../Include/Header/Header";
 import styled from "styled-components";
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 const Table = styled.div`
@@ -37,17 +37,17 @@ const ProductInfo = styled.p`
 const MenOuter = () => {
 
 
-  useEffect (() => {
+  useEffect(() => {
 
-    axios.post('http://localhost/productinfo',{
-      type : 'outer',
-      category : 'men' 
+    axios.post('http://localhost/productinfo', {
+      type: 'outer',
+      category: 'men'
     }).then((result) => {
       console.log(result);
     })
 
 
-  },[])
+  }, [])
 
 
 
@@ -71,7 +71,7 @@ const MenOuter = () => {
           <ProductInfo className="text-xs mt-1">GENDERLESS, XS–4XL</ProductInfo>
           <ProductInfo className="text-sm font-medium">코튼오버사이즈크루넥T(5부)</ProductInfo>
           <ProductInfo className="text-lg font-bold">19,900원</ProductInfo>
-          <ProductInfo className="text-lg font-bold"/>
+          <ProductInfo className="text-lg font-bold" />
         </ProductCard>
 
         {/* Product 2 */}
@@ -83,7 +83,7 @@ const MenOuter = () => {
           <ProductInfo className="text-xs mt-1">GENDERLESS, XS</ProductInfo>
           <ProductInfo className="text-sm font-medium">코튼오버사이즈크루넥T(5부)</ProductInfo>
           <ProductInfo className="text-lg font-bold text-red-600">12,900원</ProductInfo>
-          <ProductInfo className="text-lg font-bold"/>
+          <ProductInfo className="text-lg font-bold" />
         </ProductCard>
 
         {/* Product 3 */}
@@ -95,7 +95,7 @@ const MenOuter = () => {
           <ProductInfo className="text-xs mt-1">MEN, XS–XXL</ProductInfo>
           <ProductInfo className="text-sm font-medium">코튼오버사이즈스트라이프T(반팔)</ProductInfo>
           <ProductInfo className="text-lg font-bold">19,900원</ProductInfo>
-          <ProductInfo className="text-lg font-bold"/>
+          <ProductInfo className="text-lg font-bold" />
         </ProductCard>
 
         {/* Product 4 */}
@@ -107,10 +107,10 @@ const MenOuter = () => {
           <ProductInfo className="text-xs mt-1">GENDERLESS, XS–4XL</ProductInfo>
           <ProductInfo className="text-sm font-medium">크루넥T(반팔)</ProductInfo>
           <ProductInfo className="text-lg font-bold">14,900원</ProductInfo>
-          <ProductInfo className="text-lg font-bold"/>
+          <ProductInfo className="text-lg font-bold" />
         </ProductCard>
-        
-        
+
+
         {/* Product 5 */}
         <ProductCard>
           <ProductImg
@@ -120,7 +120,7 @@ const MenOuter = () => {
           <ProductInfo className="text-xs mt-1">GENDERLESS, XS–4XL</ProductInfo>
           <ProductInfo className="text-sm font-medium">코튼오버사이즈스트라이프T(반팔)</ProductInfo>
           <ProductInfo className="text-lg font-bold">19,900원</ProductInfo>
-          <ProductInfo className="text-lg font-bold"/>
+          <ProductInfo className="text-lg font-bold" />
         </ProductCard>
 
         {/* Product 6 */}
@@ -132,8 +132,8 @@ const MenOuter = () => {
           <ProductInfo className="text-xs mt-1">GENDERLESS, XS</ProductInfo>
           <ProductInfo className="text-sm font-medium">코튼오버사이즈크루넥T(5부)</ProductInfo>
           <ProductInfo className="text-lg font-bold text-red-600">12,900원</ProductInfo>
-          <ProductInfo className="text-lg font-bold"/>
-          </ProductCard>
+          <ProductInfo className="text-lg font-bold" />
+        </ProductCard>
 
         {/* Product 7 */}
         <ProductCard>
@@ -144,7 +144,7 @@ const MenOuter = () => {
           <ProductInfo className="text-xs mt-1">MEN, XS–XXL</ProductInfo>
           <ProductInfo className="text-sm font-medium">코튼오버사이즈스트라이프T(반팔)</ProductInfo>
           <ProductInfo className="text-lg font-bold">19,900원</ProductInfo>
-          <ProductInfo className="text-lg font-bold"/>
+          <ProductInfo className="text-lg font-bold" />
         </ProductCard>
         {/* Product 8 */}
         <ProductCard>
@@ -155,7 +155,7 @@ const MenOuter = () => {
           <ProductInfo className="text-xs mt-1">GENDERLESS, XS–4XL</ProductInfo>
           <ProductInfo className="text-sm font-medium">크루넥T(반팔)</ProductInfo>
           <ProductInfo className="text-lg font-bold">14,900원</ProductInfo>
-        
+
         </ProductCard>
       </Table>
     </>

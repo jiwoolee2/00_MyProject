@@ -99,7 +99,7 @@ const Navbar = ({ activeTab, onTabChange, carouselRef }) => {
                 <tbody>
                   <tr>
                     <td>
-                      <NaverText onClick={() => navi("/new-collection")}>S/S Season Collection</NaverText>
+                      <NaverText onClick={() => navi("/productinfo/new/collection")}>S/S Season Collection</NaverText>
                     </td>
                   </tr>
                 </tbody>
@@ -119,16 +119,16 @@ const Navbar = ({ activeTab, onTabChange, carouselRef }) => {
               <tbody>
                 <tr>
                   <td>
-                    <NaverText onClick={()=>("/women-outer")}>Outer</NaverText>
+                    <NaverText onClick={()=>("/productinfo/women/outer")}>Outer</NaverText>
                   </td>
                   <td>
-                    <NaverText onClick={()=>navi("/women-tshirtssweat")}>Sweat</NaverText>
+                    <NaverText onClick={()=>navi("/productinfo/women/sweat")}>Sweat</NaverText>
                   </td>
                   <td>
-                    <NaverText onClick={()=>navi("/women-shirtblouse")}>Shirt</NaverText>
+                    <NaverText onClick={()=>navi("/productinfo/women/shirt")}>Shirt</NaverText>
                   </td>
                   <td>
-                    <NaverText onClick={()=>navi("/women-pants")}>Pants</NaverText>
+                    <NaverText onClick={()=>navi("/productinfo/women/pants")}>Pants</NaverText>
                   </td>
                 </tr>
               </tbody>
@@ -144,16 +144,16 @@ const Navbar = ({ activeTab, onTabChange, carouselRef }) => {
               <tbody>
               <tr>
                   <td>
-                    <NaverText onClick={()=>("/women-outer")}>Outer</NaverText>
+                    <NaverText onClick={()=>("/productinfo/women/outer")}>Outer</NaverText>
                   </td>
                   <td>
-                    <NaverText onClick={()=>navi("/women-tshirtssweat")}>Sweat</NaverText>
+                    <NaverText onClick={()=>navi("/productinfo/women/sweat")}>Sweat</NaverText>
                   </td>
                   <td>
-                    <NaverText onClick={()=>navi("/women-shirtblouse")}>Shirt</NaverText>
+                    <NaverText onClick={()=>navi("/productinfo/women/shirt")}>Shirt</NaverText>
                   </td>
                   <td>
-                    <NaverText onClick={()=>navi("/women-pants")}>Pants</NaverText>
+                    <NaverText onClick={()=>navi("/productinfo/women/pants")}>Pants</NaverText>
                   </td>
                 </tr>
               </tbody>
@@ -169,16 +169,16 @@ const Navbar = ({ activeTab, onTabChange, carouselRef }) => {
               <tbody>
               <tr>
                   <td>
-                    <NaverText onClick={()=>("/women-outer")}>Outer</NaverText>
+                    <NaverText onClick={()=>("/productinfo/women/outer")}>Outer</NaverText>
                   </td>
                   <td>
-                    <NaverText onClick={()=>navi("/women-tshirtssweat")}>Sweat</NaverText>
+                    <NaverText onClick={()=>navi("/productinfo/women/ssweat")}>Sweat</NaverText>
                   </td>
                   <td>
-                    <NaverText onClick={()=>navi("/women-shirtblouse")}>Shirt</NaverText>
+                    <NaverText onClick={()=>navi("/productinfo/women/shirt")}>Shirt</NaverText>
                   </td>
                   <td>
-                    <NaverText onClick={()=>navi("/women-pants")}>Pants</NaverText>
+                    <NaverText onClick={()=>navi("/productinfo/women/pants")}>Pants</NaverText>
                   </td>
                 </tr>
               </tbody>

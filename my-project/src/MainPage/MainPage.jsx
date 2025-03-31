@@ -50,16 +50,16 @@ const MainPage = () => {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src="./images/uniklo.jpg" className="d-block w-100" alt="tt" style={{ opacity: 0.7 }} />
+            <img src="./images/main1.jpg" className="d-block w-100" alt="tt" style={{ opacity: 0.7 }} />
           </div>
           <div className="carousel-item">
-            <img src="./images/crystal-jo-ImyxHEwt8Gs-unsplash.jpg" className="d-block w-100" alt="..." />
+            <img src="./images/main2.jpg" className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item">
-            <img src="./images/men.jpg" className="d-block w-100" alt="..." />
+            <img src="./images/main3.jpg" className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item">
-            <img src="./images/yujia-tang--CUg2tKMHV4-unsplash.jpg" className="d-block w-100" alt="..." />
+            <img src="./images/main4.jpg" className="d-block w-100" alt="..." />
           </div>
         </div>
 
