@@ -13,7 +13,7 @@ const Header = () => {
   const navi = useNavigate();
   return (
   <>  
-        <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top bg-lightgrey">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top bg-lightgrey"  style={{ height: "80px" }}>
           <div className="container-fluid">
             <NavbarText className="navbar-brand" onClick={()=>navi("/")}>
               <img id="home" src="../images/logo.png" alt="Home"/>

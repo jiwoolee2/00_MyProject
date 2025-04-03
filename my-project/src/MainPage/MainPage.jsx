@@ -35,7 +35,7 @@ const MainPage = () => {
 
   return (
     <>
-      <Header />
+      <Header/>
       <Navbar
       activeTab={activeDropdown}
       onTabChange={setActiveDropdown}
