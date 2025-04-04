@@ -1,54 +1,56 @@
-import styled from "styled-components";
+import { Wrapper, Title, Line, Label, Btn } from "./LogIn.styles";
 import OnlyLogo from "../../Include/Header/OnlyLogo";
-
-// 제목
-const Title = styled.div`
-  text-align: left;
-  font-size: 30px;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 0 20px;
-  margin-top: 10px; /* 👈 상단 공간 줄이기 */
-`;
-
-// 구분선
-const Line = styled.hr`
-  margin: 10px auto 20px auto; /* 👈 위쪽 마진 줄이기 */
-  max-width: 500px;
-`;
-
-// 버튼
-const Btn = styled.button`
-  margin-left: 0px;
-  display: block;
-  text-align: left;
-  width: 15.2%;
-`;
-
-// 라벨
-const Label = styled.label`
-  margin-left: 0px;
-  display: block;
-  text-align: left;
-`;
-
-// 폼 전체 래퍼
-const Wrapper = styled.div`
-  max-width: 500px;
-  width: 100%;
-  font-size: 14px;
-  margin: 0 auto; /* 가로 가운데 정렬 */
-  position: fixed;
-  top: 50px;
-  left: 60px;
-`;
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useContext } from "react";
+import { AuthContext } from "../../LogInStatement/AuthContext";
 
 const LogIn = () => {
+
+  const {login} = useContext(AuthContext);
+  const navi = useNavigate();
+
+  const [memberId, setMemberId] = useState("");
+  const [memberPw, setMemberPw] = useState("");
+
+  const memberIdHandler = e => {
+    setMemberId(e.target.value)
+  }
+
+  const memberPwHandler = e => {
+    setMemberPw(e.target.value)
+  }
+
+  const btnHandler = e => {
+
+    axios.post("http://localhost/log-in",
+      { memberId,memberPw}
+    ).then((result) => {
+      console.log(result.data);
+      if(result.status === 200){
+        alert("로그인 되었습니다.");
+        navi(-1);
+      }
+      const {memberId,memberName,memberPhone,accessToken,refreshToken} = result.data;
+      login(memberId,memberName,memberPhone,accessToken,refreshToken);
+    }).catch((error) => {
+      console.log(error);
+      alert(error.response.data);
+    })
+
+
+  }
+
+
+
+
+
+
   return (
     <>
-      <OnlyLogo />
 
-
+      <OnlyLogo/>
       <Wrapper>
         <Title>로그인</Title>
         <Line />
@@ -58,7 +60,7 @@ const LogIn = () => {
           <Label className="form-label">
             이메일 주소(아이디) <span className="text-primary">※</span>
           </Label>
-          <input type="email" className="form-control" placeholder="이메일(example@uniklo.com)" />
+          <input onChange={memberIdHandler} type="email" className="form-control" placeholder="이메일(example@uniklo.com)" />
         </div>
 
         {/* 비밀번호 */}
@@ -66,11 +68,11 @@ const LogIn = () => {
           <Label className="form-label">
             비밀번호 <span className="text-primary">※</span>
           </Label>
-          <input type="password" className="form-control pe-5" placeholder="비밀번호를 입력해 주세요." />
+          <input onChange={memberPwHandler} type="password" className="form-control pe-5" placeholder="비밀번호를 입력해 주세요." />
         </div>
 
         {/* 버튼 */}
-        <Btn className="btn btn-dark">
+        <Btn onClick={btnHandler} className="btn btn-dark">
           로그인
         </Btn>
       </Wrapper>

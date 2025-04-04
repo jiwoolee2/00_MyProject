@@ -99,7 +99,7 @@ const Navbar = ({ activeTab, onTabChange, carouselRef }) => {
                 <tbody>
                   <tr>
                     <td>
-                      <NaverText onClick={() => navi("/productinfo/new/collection")}>S/S Season Collection</NaverText>
+                      <NaverText onClick={() => navi("/productinfo/new/collection")}>S/S Season New Collection</NaverText>
                     </td>
                   </tr>
                 </tbody>

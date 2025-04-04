@@ -20,7 +20,7 @@ const OnlyLogo = ( )=> {
 
     <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top bg-lightgrey">
       <NavbarText className="navbar-brand" onClick={()=>navi("/")}>
-        <img id="home" src="../images/uuu.png" alt="Home"/>
+        <img id="home" src="/images/logo.png" alt="Home"/>
       </NavbarText>
     </nav>
 
