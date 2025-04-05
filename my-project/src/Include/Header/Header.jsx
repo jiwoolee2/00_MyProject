@@ -48,6 +48,9 @@ const Header = () => {
                     <li className="nav-item">
                       <NavbarText className="nav-link" onClick={()=>navi("/my-page")}>Mypage</NavbarText>
                     </li>
+                    <li className="nav-item">
+                      <NavbarText className="nav-link" onClick={()=>navi("/board")}>Q&A</NavbarText>
+                    </li>
                   </>}
               </ul>
             </div>

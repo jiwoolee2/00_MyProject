@@ -9,6 +9,9 @@ import LogIn from './SignPage/LogIn/LogIn.jsx';
 import ClothesPage from './Clothes/ClothesPage.jsx';
 import { Provider } from './LogInStatement/AuthContext.jsx';
 import Header from './Include/Header/Header.jsx';
+import MyPage from './SignPage/MyPage/MyPage.jsx';
+import WriteBoard from './Board/WriteBoard.jsx';
+import Board from './Board/Board.jsx';
 
 function App() {
  
@@ -24,7 +27,10 @@ function App() {
         <Route path="/log-in" element={<LogIn/>}/>
         <Route path="/sign-up" element={<SignUp/>}/>
         <Route path="/log-out" element={<Header/>}/>
-        <Route path="/my-page" element={<MainPage/>}/>
+        <Route path="/my-page" element={<MyPage/>}/>
+        <Route path="/board" element={<Board/>}/>
+        <Route path="/write-board" element={<WriteBoard/>}/>
+        
         <Route path="/productinfo/:category/:type" element={<ClothesPage/>}/>
         {/* <Route path="/new-collection" element={<NewCollection/>}/> */}
 

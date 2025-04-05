@@ -33,5 +33,8 @@ export const Wrapper = styled.div`
   max-width: 500px;
   width: 100%;
   font-size: 14px;
-  margin: 0 auto; /* 가로 가운데 정렬 */
+  margin: 0 auto; 
+  position: fixed;
+  top: 120px;
+  left:100px;
 `;

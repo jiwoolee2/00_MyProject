@@ -10,9 +10,9 @@ export const Provider = ({children}) => {
   const navi = useNavigate();
 
   const [auth,setAuth] = useState({
-    memberPhone : null,
     memberId : null,
     memberName : null,
+    memberPhone : null,
     accessToken : null,
     refreshToken : null,
     isAuthenticated : false,
@@ -44,11 +44,11 @@ export const Provider = ({children}) => {
 
 
   // 로그인 통해 받은 데이터들을 auth에 대입
-  const login = (memberPhone,memberId,memberName,accessToken,refreshToken) => {
+  const login = (memberId,memberName,memberPhone,accessToken,refreshToken) => {
     setAuth({
-      memberPhone,
       memberId,
       memberName,
+      memberPhone,
       accessToken,
       refreshToken,
       isAuthenticated: true,
@@ -63,18 +63,18 @@ export const Provider = ({children}) => {
   // 로그아웃 : auth 싺 지우고, localStorage싹지우고
   const logout = () => {
     setAuth({
-      memberPhone : null,
       memberId : null,
       memberName : null,
+      memberPhone : null,
       accessToken : null,
       refreshToken : null,
       isAuthenticated : false,
     });
     localStorage.removeItem("memberId");
     localStorage.removeItem("memberName");
+    localStorage.removeItem("memberPhone");
     localStorage.removeItem("accessToken");
     localStorage.removeItem("refreshToken");
-    localStorage.removeItem("memberPhone");
     navi("/");
     alert("로그아웃 되었습니다.")
   };
