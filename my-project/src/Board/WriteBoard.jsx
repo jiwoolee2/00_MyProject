@@ -15,7 +15,6 @@ import { useContext,useEffect } from "react";
 import { AuthContext } from "../LogInStatement/AuthContext";
 import { useNavigate } from "react-router-dom";
 
-
 const WriteBoard = () => {
 
   const navi = useNavigate();
@@ -24,7 +23,6 @@ const WriteBoard = () => {
   const {auth} = useContext(AuthContext);
 
   const btnHandler = () => {
-
 
     axios.post("http://localhost/boards/insert",{
       "boardTitle" : title,
@@ -36,14 +34,9 @@ const WriteBoard = () => {
       }
     }).then((result) => {
       console.log(result);
+      navi("/board");
     })
-    setTitle("");
-    setContent("");
-
-    navi(-1);
-}
-
-
+  }
 
   return (
     <>
